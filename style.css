@@ -127,6 +127,19 @@ nav ul li a:hover::after{
 .aboutp{
     font-size: 20px;
     text-align: justify;
+    line-height: 1.5;
+}
+@media (max-width: 599px) {
+  .aboutp {  
+    width: 80%;
+    text-align: justify;
+    margin: 0 auto;
+    padding-right: 25px;
+  }
+  
+  .aboutp {
+    font-size: 16px;
+  }
 }
 .sub-skill{
     font-size: 60px;
@@ -378,6 +391,7 @@ form .btn2{
     font-weight: 300;
     margin-top: 20px;
 }
+
 /* -------------------css for small screens-----------*/
 nav .fas{
     display: none;
@@ -445,6 +459,7 @@ nav .fas{
         font-size: 14px;
     }
     
+    
 }
 
 
@@ -453,247 +468,81 @@ nav .fas{
     margin-top: -40px;
     display: block;
 }
+/*mobile card*/
+/* Existing styles for desktop cards */
 
-
-
-
-
-/*--------cardddddd---------*/
-
-/*.parent {
-    width: 290px;
-    height: 300px;
-    perspective: 1000px;
+/* New styles for mobile cards */
+@media only screen and (max-width: 600px) {
+  .custom-glass-mobile {
+    width: 90%; 
+    margin: 0 auto; 
+    margin-bottom: 20px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
   }
-  
-  .card {
+
+  .custom-glass-mobile .card2,
+  .custom-glass-mobile .card3, 
+  .custom-glass-mobile .card4 {
+    width: 100%; 
     height: 100%;
-    border-radius: 50px;
-    background: linear-gradient(135deg, rgb(0, 255, 214) 0%, rgb(8, 226, 96) 100%);
-    transition: all 0.5s ease-in-out;
-    transform-style: preserve-3d;
-    box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    transition: all .2s;
+  }
+  .custom-glass-mobile .card2:hover,
+  .custom-glass-mobile .card3:hover,
+  .custom-glass-mobile .card4:hover {
+    transform: scale(0.981);
+    border-radius: 20px;
+  }
+
+  .custom-glass-mobile p {
+    font-size: 14px;
+    font-weight: 10px;
+    text-align: center;
   }
   
-  .glass {
-    transform-style: preserve-3d;
-    position: absolute;
-    inset: 8px;
-    border-radius: 55px;
-    border-top-right-radius: 100%;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
-     -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px); 
-    transform: translate3d(0px, 0px, 25px);
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .content {
-    padding: 100px 60px 0px 30px;
-    transform: translate3d(0, 0, 26px);
-  }
-  
-  .content .title {
-    display: block;
-    color: #00894d;
-    font-weight: 900;
+  .custom-glass-mobile .card2 h {
     font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-left: 30px;
+  }
+  .custom-glass-mobile .card3 h {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-left: 30px;
+  }
+  .custom-glass-mobile .card4 h {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-left: 70px;
+  }
+
+  .custom-glass-mobile p { 
+    padding-left: 0;
+    padding-top: 20px;
+
   }
   
-  .content .text {
-    display: block;
-    color: rgba(0, 137, 78, 0.7647058824);
-    font-size: 15px;
-    margin-top: 20px;
+}
+@media (min-width: 600px) {
+  .custom-glass-mobile {
+    display: none; 
   }
-  
-  .bottom {
-    padding: 10px 12px;
-    transform-style: preserve-3d;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transform: translate3d(0, 0, 26px);
-  }
-  
-  .bottom .view-more {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    justify-content: flex-end;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .bottom .view-more:hover {
-    transform: translate3d(0, 0, 10px);
-  }
-  
-  .bottom .view-more .view-more-button {
-    background: none;
-    border: none;
-    color: #00c37b;
-    font-weight: bolder;
-    font-size: 12px;
-  }
-  
-  .bottom .view-more .svg {
-    fill: none;
-    stroke: #00c37b;
-    stroke-width: 3px;
-    max-height: 15px;
-  }
-  
-  .bottom .social-buttons-container {
-    display: flex;
-    gap: 10px;
-    transform-style: preserve-3d;
-  }
-  
-  .bottom .social-buttons-container .social-button {
-    width: 30px;
-    aspect-ratio: 1;
-    padding: 5px;
-    background: rgb(255, 255, 255);
-    border-radius: 50%;
-    border: none;
-    display: grid;
-    place-content: center;
-    box-shadow: rgba(5, 71, 17, 0.5) 0px 7px 5px -5px;
-  }
-  
-  .bottom .social-buttons-container .social-button:first-child {
-    transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
-  }
-  
-  .bottom .social-buttons-container .social-button:nth-child(2) {
-    transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
-  }
-  
-  .bottom .social-buttons-container .social-button:nth-child(3) {
-    transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
-  }
-  
-  .bottom .social-buttons-container .social-button .svg {
-    width: 15px;
-    fill: #00894d;
-  }
-  
-  .bottom .social-buttons-container .social-button:hover {
-    background: black;
-  }
-  
-  .bottom .social-buttons-container .social-button:hover .svg {
-    fill: white;
-  }
-  
-  .bottom .social-buttons-container .social-button:active {
-    background: rgb(255, 234, 0);
-  }
-  
-  .bottom .social-buttons-container .social-button:active .svg {
-    fill: black;
-  }
-  
-  .logo {
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform-style: preserve-3d;
-  }
-  
-  .logo .circle {
-    display: block;
-    position: absolute;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    top: 0;
-    right: 0;
-    box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    background: rgba(0, 249, 203, 0.2);
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .logo .circle1 {
-    width: 170px;
-    transform: translate3d(0, 0, 20px);
-    top: 8px;
-    right: 8px;
-  }
-  
-  .logo .circle2 {
-    width: 140px;
-    transform: translate3d(0, 0, 40px);
-    top: 10px;
-    right: 10px;
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
-    transition-delay: 0.4s;
-  }
-  
-  .logo .circle3 {
-    width: 110px;
-    transform: translate3d(0, 0, 60px);
-    top: 17px;
-    right: 17px;
-    transition-delay: 0.8s;
-  }
-  
-  .logo .circle4 {
-    width: 80px;
-    transform: translate3d(0, 0, 80px);
-    top: 23px;
-    right: 23px;
-    transition-delay: 1.2s;
-  }
-  
-  .logo .circle5 {
-    width: 50px;
-    transform: translate3d(0, 0, 100px);
-    top: 30px;
-    right: 30px;
-    display: grid;
-    place-content: center;
-    transition-delay: 1.6s;
-  }
-  
-  .logo .circle5 .svg {
-    width: 20px;
-    fill: white;
-  }
-  
-  .parent:hover .card {
-    transform: rotate3d(1, 1, 0, 30deg);
-    box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
-  }
-  
-  .parent:hover .card .bottom .social-buttons-container .social-button {
-    transform: translate3d(0, 0, 50px);
-    box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
-  }
-  
-  .parent:hover .card .logo .circle2 {
-    transform: translate3d(0, 0, 60px);
-  }
-  
-  .parent:hover .card .logo .circle3 {
-    transform: translate3d(0, 0, 80px);
-  }
-  
-  .parent:hover .card .logo .circle4 {
-    transform: translate3d(0, 0, 100px);
-  }
-  
-  .parent:hover .card .logo .circle5 {
-    transform: translate3d(0, 0, 120px);
-  }
+}
+
 
 
   /* work card*/
@@ -865,51 +714,57 @@ nav .fas{
   }
 
 /*moveable card*/
+@media (min-width: 600px) {
+  .custom-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
 
-.custom-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 20px;
+  .custom-container .custom-glass {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+
+  .custom-container:hover .custom-glass {
+    transform: rotate(0deg);
+    margin: 0 15px;
+  }
+
+  .custom-container .custom-glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+
+  .custom-container .custom-glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+  }
 }
-
-.custom-container .custom-glass {
-  position: relative;
-  width: 180px;
-  height: 200px;
-  background: linear-gradient(#fff2, transparent);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  border-radius: 10px;
-  margin: 0 -45px;
-  backdrop-filter: blur(10px);
-  transform: rotate(calc(var(--r) * 1deg));
-}
-
-.custom-container:hover .custom-glass {
-  transform: rotate(0deg);
-  margin: 0 15px;
-}
-
-.custom-container .custom-glass::before {
-  content: attr(data-text);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.05);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-
-.custom-container .custom-glass svg {
-  font-size: 2.5em;
-  fill: #fff;
+@media (max-width: 599px) {
+  .custom-container {
+    display: none;
+  }
 }
