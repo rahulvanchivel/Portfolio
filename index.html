@@ -285,9 +285,15 @@
         <p>Copyright © 2024 Rahul Vanchivel</p>
     </div>
 </div>
-<!-----------------------------------animation welcome----------------------------------------->
+<!-----------------------------------Floating button----------------------------------------->
 
-
+<button class="floating-button" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" class="svgIcon" width="4" height="4" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;">
+      <path d="M5 10l7-7 7 7" />
+      <path d="M12 3v14" />
+    </svg>
+  </button>
+    
 
 
 <!-----------------------------------------script---------------------------------------------->
@@ -335,6 +341,27 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+    // script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+  var floatingButtonContainer = document.querySelector('.floating-button-container');
+
+  window.onscroll = function() {
+    // Show or hide the floating button based on scroll position
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      floatingButtonContainer.style.display = "block";
+    } else {
+      floatingButtonContainer.style.display = "none";
+    }
+  };
+});
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
   </script>
+  
 </body>
 </html>
