@@ -33,7 +33,7 @@
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
           <!--li><a href="#skills">Skills</a></li-->
-          <li><a href="#services">Projects</a></li>
+          <li><a href="#services">Works</a></li>
           <!--<li><a href="#portfolio">Works</a></li>-->
           <li><a href="#contact">Contact</a></li>
           <i class="fas fa-times" onclick="closemenu()"></i>
@@ -270,55 +270,241 @@
 
 
   <!------------------------projects-------------->
-  <div id="services">
-    <div class="container">
-      <h1 class="sub-title">My Projects</h1>
-      <br><br><h2>I'm currently working on some exciting XR and Unity-based projects. Stay tuned!</h2>
-      <!--
-      </div><div class="services-list">
-        <div>
-          <a href="https://github.com/rahulvanchivel/KEC-Forum" target="_blank">
-            <i class="fa-regular fa-comment-dots"></i>
-            <h2>KEC Forum - Figma</h2>
-            <p>KEC Forum is a digital hub where students, alumni, and faculty can connect, collaborate, and share their
-              knowledge and experiences.</p>
-          </a>
-          <a href="https://github.com/rahulvanchivel/KEC-Forum" target="_blank"></a>
+
+
+<div id="services">
+    <div class="container" style="padding: 10px 10%;">
+        <h1 class="sub-title" style="font-size: 60px; font-weight: 600; color: #fff;">My Works</h1>
+        
+        <div class="video-projects">
+            <!-- Video Project 1 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <video class="video-player" preload="metadata">
+                        <source src="videos/Bluestar1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div class="video-overlay">
+                        <button class="play-button"></button>
+                    </div>
+                    
+                    <div class="video-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="control-btn play-pause">▶️</button>
+                            <button class="control-btn mute">🔊</button>
+                            <button class="control-btn fullscreen">⛶</button>
+                            <span class="time-display">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-info">
+                    <h3>Screwing Simulation</h3>
+                    <p>Developed an interactive VR module for industrial
+                      screw-fixing tasks using Unity and XR Interaction
+                      Toolkit. Implemented object interactions, animations,
+                      and task validation to simulate real-world assembly
+                      training.</p>
+                    <div class="video-tags">
+                        <span class="video-tag">Unity 3D</span>
+                        <span class="video-tag">C#</span>
+                        <span class="video-tag">VR</span>
+                        <span class="video-tag">Industrial</span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Project 2 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <video class="video-player" preload="metadata">
+                        <source src="videos/Work At Height Recording - 1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div class="video-overlay">
+                        <button class="play-button"></button>
+                    </div>
+                    
+                    <div class="video-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="control-btn play-pause">▶️</button>
+                            <button class="control-btn mute">🔊</button>
+                            <button class="control-btn fullscreen">⛶</button>
+                            <span class="time-display">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-info">
+                    <h3>Work At Height</h3>
+                    <p>Created a VR safety simulation focusing on working
+                        at heights. Implemented realistic physics, hazard
+                        detection, and guided training scenarios to promote
+                        safety awareness in industrial environments.</p>
+                    <div class="video-tags">
+                        <span class="video-tag">Unity 3D</span>
+                        <span class="video-tag">C#</span>
+                        <span class="video-tag">VR</span>
+                        <span class="video-tag">Industrial</span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Project 3 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <video class="video-player" preload="metadata">
+                        <source src="videos/Physics Phonon I.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div class="video-overlay">
+                        <button class="play-button"></button>
+                    </div>
+                    
+                    <div class="video-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="control-btn play-pause">▶️</button>
+                            <button class="control-btn mute">🔊</button>
+                            <button class="control-btn fullscreen">⛶</button>
+                            <span class="time-display">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-info">
+                    <h3>Physics Learning</h3>
+                    <p>Built an immersive learning experience combining
+                        Unity, AI-based text and voice assistance, and
+                        interactive 3D timelines to teach physics concepts.
+                        Designed for cross-platform</p>
+                    <div class="video-tags">
+                        <span class="video-tag">Unity 3D</span>
+                        <span class="video-tag">C#</span>
+                        <span class="video-tag">VR</span>
+                       <span class="video-tag">WebGL</span>
+                        <span class="video-tag">Android</span>
+                        <span class="video-tag">iOS</span>
+                        <span class="video-tag">Education</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <a href="https://github.com/rahulvanchivel/3D-Carousel---Figma" target="_blank">
-            <i class="fa-solid fa-spray-can-sparkles"></i>
-            <h2>3D Carousel - Figma</h2>
-            <p>A stunning 3D carousel created entirely in Figma</p>
-          </a>
-          <a href="https://github.com/rahulvanchivel/3D-Carousel---Figma" target="_blank"></a>
-        </div>
-        <div>
-          <a href="https://github.com/rahulvanchivel/Laptop-customization" target="_blank">
-            <i class="fa-solid fa-laptop"></i>
-            <h2>Laptop Customization - Web</h2>
-            <p>Developed a web application named using HTML, CSS, & PHP for seamless database connectivity.</p>
-          </a>
-          <a href="https://github.com/rahulvanchivel/Laptop-customization" target="_blank"></a>
-        </div>
-        <div>
-          <a href="https://github.com/rahulvanchivel/Game-controller-page-design---Figma" target="_blank">
-            <i class="fa-solid fa-gamepad"></i>
-            <h2>Game Controller - Figma</h2>
-            <p>Exciting gaming controller product page using Figma!</p>
-          </a>
-          <a href="https://github.com/rahulvanchivel/Game-controller-page-design---Figma" target="_blank"></a>
-        </div>
-      </div>
+
+        <!-- GitHub Button -->
+        <a href="https://github.com/rahulvanchivel/" target="_blank" class="btn" style="display: block; margin: 50px auto; width: fit-content; border: 1px solid #FF5F00; padding: 14px 50px; border-radius: 6px; text-decoration: none; color: #fff; transition: background 0.5s;">See more</a>
     </div>
-  </div>
+</div>
 
-  -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const videoCards = document.querySelectorAll('.video-card');
+    
+    videoCards.forEach(card => {
+        const video = card.querySelector('.video-player');
+        const playButton = card.querySelector('.play-button');
+        const overlay = card.querySelector('.video-overlay');
+        const controls = card.querySelector('.video-controls');
+        const playPauseBtn = card.querySelector('.play-pause');
+        const muteBtn = card.querySelector('.mute');
+        const fullscreenBtn = card.querySelector('.fullscreen');
+        const progressBar = card.querySelector('.progress-bar');
+        const progressContainer = card.querySelector('.progress-container');
+        const timeDisplay = card.querySelector('.time-display');
+        
+        // Play button functionality
+        playButton.addEventListener('click', () => {
+            video.play();
+            overlay.classList.add('hidden');
+            controls.classList.add('show');
+        });
+        
+        // Play/Pause button
+        playPauseBtn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                playPauseBtn.textContent = '⏸️';
+            } else {
+                video.pause();
+                playPauseBtn.textContent = '▶️';
+            }
+        });
+        
+        // Mute button
+        muteBtn.addEventListener('click', () => {
+            video.muted = !video.muted;
+            muteBtn.textContent = video.muted ? '🔇' : '🔊';
+        });
+        
+        // Fullscreen button
+        fullscreenBtn.addEventListener('click', () => {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        });
+        
+        // Progress bar
+        video.addEventListener('timeupdate', () => {
+            const progress = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = progress + '%';
+            
+            const currentMinutes = Math.floor(video.currentTime / 60);
+            const currentSeconds = Math.floor(video.currentTime % 60);
+            const durationMinutes = Math.floor(video.duration / 60);
+            const durationSeconds = Math.floor(video.duration % 60);
+            
+            timeDisplay.textContent = `${currentMinutes}:${currentSeconds.toString().padStart(2, '0')} / ${durationMinutes}:${durationSeconds.toString().padStart(2, '0')}`;
+        });
+        
+        // Progress bar click
+        progressContainer.addEventListener('click', (e) => {
+            const clickX = e.offsetX;
+            const width = progressContainer.offsetWidth;
+            const duration = video.duration;
+            
+            video.currentTime = (clickX / width) * duration;
+        });
+        
+        // Video ended
+        video.addEventListener('ended', () => {
+            playPauseBtn.textContent = '▶️';
+            overlay.classList.remove('hidden');
+            controls.classList.remove('show');
+            video.currentTime = 0;
+        });
+        
+        // Hide controls when not hovering (except when video is playing)
+        card.addEventListener('mouseleave', () => {
+            if (!video.paused) {
+                setTimeout(() => {
+                    if (!card.matches(':hover')) {
+                        controls.classList.remove('show');
+                    }
+                }, 2000);
+            }
+        });
+    });
+});
+</script>
 
-    <!------------butttttonnnnn-->
-    <a href="https://github.com/rahulvanchivel/" target="_blank" class="btn">See more</a>
-  </div>
-  </div>
 
   <!--------------------gallery--------------------------->
   <!--div class="lightbox">
