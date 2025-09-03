@@ -1333,5 +1333,166 @@ a:hover .card5 {
         font-size: 15px;
     }
 }
+.desktop-warning-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
 
+        .desktop-warning-modal {
+            background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
+            border: 2px solid #FF5F00;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            animation: slideUp 0.4s ease;
+            box-shadow: 0 20px 40px rgba(255, 95, 0, 0.3);
+        }
+
+        .desktop-icon {
+            font-size: 60px;
+            color: #FF5F00;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .desktop-warning-modal h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .desktop-warning-modal p {
+            color: #ababab;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .warning-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .warning-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .btn-primary {
+            background: #FF5F00;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e55400;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ababab;
+            border: 1px solid #ababab;
+        }
+
+        .btn-secondary:hover {
+            color: #fff;
+            border-color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #ababab;
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #FF5F00;
+        }
+
+        /* Hide on desktop */
+        @media (min-width: 769px) {
+            .desktop-warning-overlay {
+                display: none !important;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Additional mobile-specific styling */
+        @media (max-width: 480px) {
+            .desktop-warning-modal {
+                padding: 25px 20px;
+                margin: 0 10px;
+            }
+
+            .desktop-icon {
+                font-size: 50px;
+            }
+
+            .desktop-warning-modal h2 {
+                font-size: 22px;
+            }
+
+            .desktop-warning-modal p {
+                font-size: 15px;
+            }
+
+            .warning-buttons {
+                flex-direction: column;
+            }
+
+            .warning-btn {
+                width: 100%;
+            }
+        }
+
+        /* Hide popup class */
+        .hidden {
+            display: none !important;
+        }
 

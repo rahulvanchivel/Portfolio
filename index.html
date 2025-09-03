@@ -244,14 +244,14 @@
       <p>Unity 3D</p>
       <p>XR Interaction Toolkit</p>
       <p>AR Foundation</p>
-      <p>Vuforia/p>
-      <p>PUN/p>
+      <p>Vuforia</p>
+      <p>PUN</p>
     </div>
   </div>
 
   <div class="card custom-glass-mobile">
     <div class="card3">
-      <h>Prograamming</h>
+      <h>Programming</h>
       <p>C#</p>
       <p>Javascript</p>
       <p>Python</p>
@@ -631,12 +631,75 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
   </script>
-<div class="desktop-suggestion" id="desktopBanner">
-    <div class="banner-content">
-        <span>💻 For the best experience with interactive features, view on desktop</span>
-        <button onclick="closeBanner()" class="close-btn">×</button>
+<div id="desktopWarning" class="desktop-warning-overlay">
+    <div class="desktop-warning-modal">
+        <button class="close-btn" onclick="closeDesktopWarning()">&times;</button>
+        
+        <div class="desktop-icon">💻</div>
+        
+        <h2>Best Viewed on Desktop</h2>
+        <p>This portfolio includes interactive XR demos, video controls, and immersive experiences optimized for desktop viewing. For the full experience, please view on a desktop or laptop device.</p>
+        
+        <div class="warning-buttons">
+            <button class="warning-btn btn-primary" onclick="closeDesktopWarning()">Got It</button>
+            <button class="warning-btn btn-secondary" onclick="continueOnMobile()">Continue on Mobile</button>
+        </div>
     </div>
 </div>
+<script>
+// Check if user is on mobile device
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+}
+
+// Show desktop warning only on mobile and if not dismissed before
+function showDesktopWarning() {
+    const hasSeenWarning = localStorage.getItem('desktopWarningDismissed');
+    
+    if (isMobileDevice() && !hasSeenWarning) {
+        document.getElementById('desktopWarning').style.display = 'flex';
+    } else {
+        document.getElementById('desktopWarning').style.display = 'none';
+    }
+}
+
+// Close warning and remember user's choice
+function closeDesktopWarning() {
+    document.getElementById('desktopWarning').classList.add('hidden');
+    localStorage.setItem('desktopWarningDismissed', 'true');
+}
+
+// Continue on mobile without showing warning again
+function continueOnMobile() {
+    document.getElementById('desktopWarning').classList.add('hidden');
+    localStorage.setItem('desktopWarningDismissed', 'true');
+}
+
+// Reset warning (for testing purposes)
+function resetWarning() {
+    localStorage.removeItem('desktopWarningDismissed');
+    location.reload();
+}
+
+// Initialize popup on page load
+document.addEventListener('DOMContentLoaded', function() {
+    showDesktopWarning();
+});
+
+// Close popup when clicking outside modal
+document.getElementById('desktopWarning').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeDesktopWarning();
+    }
+});
+
+// Close popup on ESC key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeDesktopWarning();
+    }
+});
+</script>
 </body>
 
 </html>
